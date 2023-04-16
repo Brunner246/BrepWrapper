@@ -5,10 +5,10 @@ from typing import List
 
 import cadwork
 
-from Interfaces.IFacetWrapper import IFacetWrapper
+from Brep.Interfaces.IFacet import IFacet
 
 
-class CFacetWrapper(IFacetWrapper):
+class CFacet(IFacet):
     def __init__(self, facet_number: int, facet: List[cadwork.point_3d]):
         if facet_number < 0:
             raise ValueError("Facet number must be positive")

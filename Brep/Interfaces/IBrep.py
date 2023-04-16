@@ -5,16 +5,20 @@
 from abc import ABC, abstractmethod
 
 
-class IFacetWrapper(ABC):
+class IBrep(ABC):
 
     @abstractmethod
-    def get_facet_edges(self):
+    def get_brep_faces(self):
         pass
 
     @abstractmethod
-    def get_facet_vertices(self):
+    def get_brep_edges(self):
         pass
 
     @abstractmethod
-    def get_facet_normal(self):
+    def get_brep_vertices(self):
         pass
+
+    # @abstractmethod
+    # def get_brep_shells(self):
+    #     pass

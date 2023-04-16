@@ -8,8 +8,8 @@ import cadwork
 from Brep.Interfaces.IFacet import IFacet
 
 
-class CFacet(IFacet):
-    def __init__(self, facet_number: int, facet: List[cadwork.point_3d]):
+class CFacetWrapper(IFacet):
+    def __init__(self, facet_number: int, facet): # : List[cadwork.point_3d]
         if facet_number < 0:
             raise ValueError("Facet number must be positive")
         self.facet_nr = facet_number

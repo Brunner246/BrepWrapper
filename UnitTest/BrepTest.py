@@ -1,6 +1,15 @@
 import unittest
 from typing import List
 
+import sys
+
+import Brep
+
+sys.path.append(r"C:\Users\michael.brunner\PycharmProjects\CwAPI3D\Brep")
+
+for p in sys.path:
+    print(p)
+
 from Brep.Interfaces.IBrep import IBrep
 from Brep.Interfaces.IFacet import IFacet
 
@@ -64,6 +73,9 @@ class MyTestCase(unittest.TestCase):
         element_id = 12345
         with self.assertRaises(ValueError):
             brep = CBrepTest(element_id)
+
+    def test_add_one(self):
+        self.assertEqual(Brep.add_one(5), 6)
 
 
 if __name__ == '__main__':

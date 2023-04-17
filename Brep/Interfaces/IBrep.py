@@ -19,6 +19,10 @@ class IBrep(ABC):
     def get_brep_vertices(self):
         pass
 
+    @abstractmethod
+    def get_facet_count(self):
+        pass
+
     # @abstractmethod
     # def get_brep_shells(self):
     #     pass

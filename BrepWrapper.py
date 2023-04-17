@@ -23,11 +23,9 @@ cwps = [
 
 from Brep.Entities.CBrepWrapper import CBrepWrapper
 from Brep.Interfaces.IBrep import IBrep
-import Test
 
 if __name__ == '__main__':
     print(IBrep.__dict__)
-    print(Test.add_one(5))
 
     element_ids = ec.get_active_identifiable_element_ids()
     print(f"element_ids: {element_ids}")

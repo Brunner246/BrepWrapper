@@ -1,18 +1,9 @@
 import unittest
 from typing import List
 
-import sys
-
-import Brep
-
-sys.path.append(r"C:\Users\michael.brunner\PycharmProjects\CwAPI3D\Brep")
-
-for p in sys.path:
-    print(p)
-
 from Brep.Interfaces.IBrep import IBrep
 from Brep.Interfaces.IFacet import IFacet
-
+import Brep
 
 class Cpoint3d:
     def __init__(self, x: float, y: float, z: float):
@@ -26,13 +17,19 @@ class CFacetTest(IFacet):
         self.facet_nr = facet_number
         self.facet = facet
 
-    def get_facet_edges(self):
+    def get_external_polygon(self):
+        pass
+
+    def get_internal_polygon(self):
         pass
 
     def get_facet_vertices(self):
         pass
 
     def get_facet_normal(self):
+        pass
+
+    def get_distance_to_origin(self):
         pass
 
 
@@ -52,6 +49,9 @@ class CBrepTest(IBrep):
         pass
 
     def get_brep_vertices(self):
+        pass
+
+    def get_facet_count(self):
         pass
 
     def __set_facets(self):

@@ -3,12 +3,12 @@
 # Description : Wrapper for the CBrep class
 
 from typing import List
-import cadwork
+
 import geometry_controller as gc
 
-from Brep.Interfaces.IFacet import IFacet
 from Brep.Entities.CFacetWrapper import CFacetWrapper
 from Brep.Interfaces.IBrep import IBrep
+from Brep.Interfaces.IFacet import IFacet
 
 
 class CBrepWrapper(IBrep):
@@ -30,8 +30,8 @@ class CBrepWrapper(IBrep):
     def get_brep_vertices(self):
         return gc.get_element_vertices(self.element_id)
 
-    # def get_brep_shells(self):
-    #     return self.brep.shells
+    def get_facet_count(self):
+        return gc.get_element_facet_count(self.element_id)
 
     # private methods
     def __set_facets(self):
